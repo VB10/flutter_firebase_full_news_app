@@ -7,3 +7,5 @@ A new Flutter project.
 "editor.codeActionsOnSave": {
 "source.fixAll": true
 }
+
+https://api.flutter.dev/flutter/material/TextTheme-class.html
