@@ -41,6 +41,12 @@ dependencies:
   #Firebase
   cloud_firestore: ^4.4.3
   firebase_core: ^2.7.0
+  firebase_auth: ^4.2.9
+  firebase_ui_auth: ^1.1.15
+  firebase_ui_oauth_google: ^1.0.22
+
+  shared_preferences: ^2.0.18
+  # https://pub.dev/packages/google_sign_in
 
   # Utility
   animated_text_kit: ^4.2.2
