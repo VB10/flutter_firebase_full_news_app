@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_full_news_app/feature/splash/splash_view.dart';
+import 'package:flutter_firebase_full_news_app/feature/auth/authentication_view.dart';
 import 'package:flutter_firebase_full_news_app/product/constants/index.dart';
+import 'package:flutter_firebase_full_news_app/product/initialize/app_builder.dart';
+import 'package:flutter_firebase_full_news_app/product/initialize/app_theme.dart';
 import 'package:flutter_firebase_full_news_app/product/initialize/application_start.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 Future<void> main() async {
   await ApplicationStart.init();
+
   runApp(const ProviderScope(child: MyApp()));
 }
 
@@ -14,9 +17,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      builder: (context, child) => AppBuilder(child).build(),
       title: StringConstants.appName,
-      home: SplashView(),
+      home: const AuthenticationView(),
+      theme: AppTheme(context).theme,
     );
   }
 }

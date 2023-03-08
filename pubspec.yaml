@@ -37,10 +37,17 @@ dependencies:
   flutter_riverpod: ^2.2.0
   kartal: ^2.8.0
   equatable: ^2.0.5
+  responsive_framework: ^0.2.0
+  responsive_builder: ^0.6.3
 
   #Firebase
   cloud_firestore: ^4.4.3
   firebase_core: ^2.7.0
+  firebase_auth: ^4.2.9
+  firebase_ui_auth: ^1.1.15
+  firebase_ui_oauth_google: ^1.0.22
+
+  shared_preferences: ^2.0.18
 
   # Utility
   animated_text_kit: ^4.2.2
