@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_full_news_app/feature/auth/authentication_view.dart';
+import 'package:flutter_firebase_full_news_app/feature/home/home_view.dart';
 import 'package:flutter_firebase_full_news_app/product/constants/index.dart';
 import 'package:flutter_firebase_full_news_app/product/initialize/app_builder.dart';
 import 'package:flutter_firebase_full_news_app/product/initialize/app_theme.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       builder: (context, child) => AppBuilder(child).build(),
       title: StringConstants.appName,
-      home: const AuthenticationView(),
+      home: const HomeView(),
       theme: AppTheme(context).theme,
     );
   }

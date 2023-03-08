@@ -14,8 +14,8 @@ class AppBuilder {
       defaultScale: true,
       breakpoints: [
         const ResponsiveBreakpoint.resize(480, name: MOBILE),
-        const ResponsiveBreakpoint.resize(800, name: TABLET),
-        const ResponsiveBreakpoint.autoScale(1200, name: DESKTOP),
+        const ResponsiveBreakpoint.autoScale(800, name: TABLET),
+        const ResponsiveBreakpoint.resize(1200, name: DESKTOP),
       ],
       background: Container(color: const Color(0xFFF5F5F5)),
     );

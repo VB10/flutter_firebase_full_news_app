@@ -4,6 +4,8 @@ import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_full_news_app/feature/auth/authentication_provider.dart';
 import 'package:flutter_firebase_full_news_app/product/constants/index.dart';
+import 'package:flutter_firebase_full_news_app/product/widget/text/sub_title_text.dart';
+import 'package:flutter_firebase_full_news_app/product/widget/text/title_text.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:kartal/kartal.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -122,17 +124,13 @@ class _Header extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          StringConstants.loginWelcomeBack,
-          style: context.textTheme.headlineSmall?.copyWith(
-            fontWeight: FontWeight.bold,
-          ),
+        const TitleText(
+          value: StringConstants.loginWelcomeBack,
         ),
         Padding(
           padding: context.onlyTopPaddingLow,
-          child: Text(
-            StringConstants.loginWelcomeDetail,
-            style: context.textTheme.titleMedium?.copyWith(),
+          child: const SubTitleText(
+            value: StringConstants.loginWelcomeDetail,
           ),
         ),
       ],
