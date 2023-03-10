@@ -11,4 +11,13 @@ class StringConstants {
       'I am happy to see you again. You can continue where you left off by logging in';
 
   static const continueToApp = 'Continue to app';
+
+  // Home
+  static const homeBrowse = 'Browse';
+  static const homeMessage =
+      'I am happy to see you again. You can continue where you left off by logging in';
+
+  static const homeTitle = 'Recommended for you';
+  static const homeSeeAll = 'See all';
+  static const homeSearchHint = 'Search';
 }
