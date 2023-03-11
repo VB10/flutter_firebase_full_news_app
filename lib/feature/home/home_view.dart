@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_full_news_app/feature/home/home_provider.dart';
 import 'package:flutter_firebase_full_news_app/feature/home/sub_view/home_serach_delegate.dart';
+import 'package:flutter_firebase_full_news_app/feature/home_create/home_create_view.dart';
 import 'package:flutter_firebase_full_news_app/product/constants/color_constants.dart';
 import 'package:flutter_firebase_full_news_app/product/constants/string_constants.dart';
 import 'package:flutter_firebase_full_news_app/product/models/tag.dart';
@@ -49,8 +50,21 @@ class _HomeViewState extends ConsumerState<HomeView> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: SafeArea(
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () async {
+          final response = await context.navigateToPage<bool?>(
+            const HomeCreateView(),
+            type: SlideType.BOTTOM,
+          );
+
+          if (response ?? false) {
+            await ref.read(_homeProvider.notifier).fetchAndLoad();
+          }
+        },
+      ),
+      body: SafeArea(
         child: Stack(
           children: [
             ListView(

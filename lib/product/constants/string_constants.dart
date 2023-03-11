@@ -20,4 +20,10 @@ class StringConstants {
   static const homeTitle = 'Recommended for you';
   static const homeSeeAll = 'See all';
   static const homeSearchHint = 'Search';
+  static const addItemTitle = 'Add new item';
+
+  // Component
+  static const String dropdownHint = 'Select Items';
+  static const String dropdownTitle = 'Title';
+  static const String buttonSave = 'Save';
 }
