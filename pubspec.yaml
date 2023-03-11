@@ -46,11 +46,13 @@ dependencies:
   firebase_auth: ^4.2.9
   firebase_ui_auth: ^1.1.15
   firebase_ui_oauth_google: ^1.0.22
+  firebase_storage: ^11.0.15
 
   shared_preferences: ^2.0.18
 
   # Utility
   animated_text_kit: ^4.2.2
+  image_picker: ^0.8.7
 
 dev_dependencies:
   flutter_test:
